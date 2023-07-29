@@ -27,7 +27,7 @@ const NavItem = ({ href, text }) => {
   );
 };
 
-// DropdownItem component
+
 const DropdownItem = ({ href, text, imgSrc }) => {
   return (
     <a href={href} className="dropbtn flex items-center gap-x-3">
@@ -79,7 +79,7 @@ const Header = () => {
             <NavItem href="#courses" text="Community" />
 
 
-            {/* NavItem component */}
+            {/* NavItem component  to check git*/}
             <NavItem href="#blog" text="Practice" />
 
             <Stack direction="row" spacing={7} sx={{height:"4rem"}}>
