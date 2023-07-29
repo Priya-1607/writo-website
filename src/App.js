@@ -8,6 +8,9 @@ import About from './pages/about';
 import Blogs from './pages/blogs';
 import SignUp from './pages/signup';
 import Contact from './pages/contact';
+import Platform from './pages/platformPage/Platform.js'
+import MeetOurExp from './pages/expertsPage/MeetOurExp.js'
+
 
 function App() {
 	return (
@@ -20,6 +23,8 @@ function App() {
 				<Route path='/blogs' element={<Blogs />} />
 				<Route path='/sign-up' element={<SignUp />} />
 			</Routes>
+			<Platform/>
+			<MeetOurExp/>
 		</Router>
 	);
 }
