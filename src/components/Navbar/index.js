@@ -1,7 +1,54 @@
 import React from 'react';
 import './module.css'
 
+<<<<<<< HEAD
 
+=======
+// Jahangir
+// Logo component
+const Logo = () => {
+  return (
+    <a href="#" className="logo">
+    <img src={`${process.env.PUBLIC_URL}/assets//images/logo.svg`} width="162" height="50" alt="EduWeb logo" />
+    </a>
+  );
+};
+
+// NavItem component
+const NavItem = ({ href, text }) => {
+  return (
+    <li className="navbar-item">
+      <a href={href} className="navbar-link" data-nav-link>
+        {text}
+      </a>
+    </li>
+  );
+};
+
+
+const DropdownItem = ({ href, text, imgSrc }) => {
+  return (
+    <a href={href} className="dropbtn flex items-center gap-x-3">
+      {text}
+      <img src={imgSrc} alt="" />
+    </a>
+  );
+};
+
+// ChildDropdownItem component
+const ChildDropdownItem = ({ href, text, imgSrc }) => {
+  return (
+    <a href={href}>
+      <div className="flex items-center justify-between">
+        <p>{text}</p>
+        <img src={imgSrc} alt="" />
+      </div>
+    </a>
+  );
+};
+
+// Header component
+>>>>>>> jahangir
 const Header = () => {
   return (
     <header className="header" data-header>

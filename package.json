@@ -47,7 +47,11 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "style-loader": "^3.3.3",
+=======
+    "daisyui": "^3.5.0",
+>>>>>>> jahangir
     "tailwindcss": "^3.3.3"
   }
 }

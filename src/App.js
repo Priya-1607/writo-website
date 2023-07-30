@@ -8,6 +8,7 @@ import About from './pages/about';
 import Blogs from './pages/blogs';
 import SignUp from './pages/signup';
 import Contact from './pages/contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -20,7 +21,9 @@ function App() {
 				<Route path='/blogs' element={<Blogs />} />
 				<Route path='/sign-up' element={<SignUp />} />
 			</Routes>
+			<Footer></Footer>
 		</Router>
+		
 	);
 }
 
