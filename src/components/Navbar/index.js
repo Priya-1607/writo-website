@@ -1,64 +1,65 @@
 import React from 'react';
 import './module.css'
-
+import Button from '@material-ui/core/Button';
+import { useGradientBtnStyles } from '@mui-treasury/styles/button/gradient';
+import { usePushingGutterStyles } from '@mui-treasury/styles/gutter/pushing';
+import './graidentBtn.style'
 // Jahangir
 // Logo component
-const Logo = () => {
-  return (
-    <a href="#" className="logo">
-    <img src={`${process.env.PUBLIC_URL}/assets//images/logo.svg`} width="162" height="50" alt="EduWeb logo" />
-    </a>
-  );
-};
-
-// NavItem component
-const NavItem = ({ href, text }) => {
-  return (
-    <li className="navbar-item">
-      <a href={href} className="navbar-link" data-nav-link>
-        {text}
-      </a>
-    </li>
-  );
-};
 
 
-const DropdownItem = ({ href, text, imgSrc }) => {
-  return (
-    <a href={href} className="dropbtn flex items-center gap-x-3">
-      {text}
-      <img src={imgSrc} alt="" />
-    </a>
-  );
-};
 
-// ChildDropdownItem component
-const ChildDropdownItem = ({ href, text, imgSrc }) => {
+const GradientBtn = () => {
+  const styles = useGradientBtnStyles();
+  const chubbyStyles = useGradientBtnStyles({ chubby: true });
+  const gutterStyles = usePushingGutterStyles({ cssProp: 'marginBottom', space: 2 });
   return (
-    <a href={href}>
-      <div className="flex items-center justify-between">
-        <p>{text}</p>
-        <img src={imgSrc} alt="" />
+   
+    <div className={gutterStyles.parent}>
+      {/* <div>
+        
+      </div> */}
+      <div>
+        <Button classes={chubbyStyles} sx={{width:"10px"}}>Login</Button>
       </div>
-    </a>
+     
+    </div>
+   
+  );
+};
+const GradientBtnDefault = () => {
+  const styles = useGradientBtnStyles();
+ 
+  const gutterStyles = usePushingGutterStyles({ cssProp: 'marginBottom', space: 2 });
+  return (
+   
+    <div className={gutterStyles.parent}>
+      {/* <div>
+        
+      </div> */}
+      
+      <div><Button classes={styles}>Enroll Now</Button></div>
+    </div>
+   
   );
 };
 
 // Header component
 const Header = () => {
   return (
+    <>
     <header className="header" data-header>
       <div className="container">
 
         <a href="#" className="logo">
-          <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo" />
+          <img src="./assets/images/logo.jpg" width="50" height="10" alt="EduWeb logo" />
         </a>
 
         <nav className="navbar" data-navbar>
 
           <div className="wrapper">
             <a href="#" className="logo">
-              <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo" />
+              <img src="./assets/images/logo.jpg" width="50" height="50" alt="EduWeb logo" />
             </a>
 
             <button className="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -72,6 +73,18 @@ const Header = () => {
               <a href="#home" className="navbar-link" data-nav-link>Courses</a>
             </li> */}
 
+           
+<li className="navbar-item">
+              <a href="#" className="navbar-link" data-nav-link>
+                <div className="flex items-center gap-x-2">
+                  <img src="https://www.codingninjas.com/assets-landing/icons/header-cc-partner.svg" alt="" />
+                  <p>Mentorship Program</p>
+                  <button className="mentorship-btn">new</button>
+                </div>
+              </a>
+            </li>
+
+
             <li className="md:block hidden">
               <div className="dropdown">
                 <a href="#courses" className="dropbtn flex items-center gap-x-3">
@@ -84,7 +97,7 @@ const Header = () => {
                 </a>
                 <div className="dropdown-content p-1 pr-0">
                 <div className="md:flex md:w-[650px] w-full">
-                  <div className="md:w-[50%] md:pr-16">
+                  {/* <div className="md:w-[50%] md:pr-16">
                     <h4 className="font-semibold text-black text-[20px]">Recommended courses</h4>
                     <p>The most in demand courses at the <br/> moment</p>
                     <a href="">
@@ -101,7 +114,7 @@ const Header = () => {
                         <img className="h-[60%] w-[60%]" src="./assets//images/c-language.svg" alt="" srcset=""/>
                       </div>
                     </a>
-                  </div>
+                  </div> */}
 
                  
                   <div className="md:w-[50%]">
@@ -316,8 +329,8 @@ const Header = () => {
             <li className="navbar-item">
               <a href="#about" className="navbar-link" data-nav-link>
                 <div className="flex items-center gax-x-2">
-                  <p>Scholarship</p>
-                  <button className="scholarshipbtn">UP TO% OFF</button>
+                  <p>Training Program</p>
+                  
                 </div>
               </a>
             </li>
@@ -424,26 +437,19 @@ const Header = () => {
               <div className="practice">
                 <a href="#blog" className="pracbtn navbar-link" data-nav-link="">Practice</a>
                 <div className="practice-content">
-                <p>Coding Ninjas</p>
-                <a href="#">Contacts</a>
-                <a href="#">Guided Pats</a>
-                <a href="#">Code Problems</a>
-                <a href="#">Interview Experiences</a>
-                <a href="#">Mock Tests</a>
+                <p>Writo.io</p>
+                <a href="#">Mock Interview</a>
+                <a href="#">Communication Skill</a>
+               
+               
                   {/* ... practice content ... */}
                 </div>
               </div>
             </li>
 
-            <li className="navbar-item">
-              <a href="#" className="navbar-link" data-nav-link>
-                <div className="flex items-center gap-x-2">
-                  <img src="https://www.codingninjas.com/assets-landing/icons/header-cc-partner.svg" alt="" />
-                  <p>Mentorship Program</p>
-                  <button className="mentorship-btn">new</button>
-                </div>
-              </a>
-            </li>
+           
+
+           
 
           </ul>
 
@@ -455,16 +461,16 @@ const Header = () => {
             <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
           </button>
 
-          <button className="header-action-btn" aria-label="cart" title="Cart">
+          {/* <button className="header-action-btn" aria-label="cart" title="Cart">
             <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
             <span className="btn-badge">0</span>
-          </button>
+          </button> */}
+         
 
-          <a href="#" className="btn has-before">
-            <span className="span">Log in</span>
-            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          <a href="#">
+          <GradientBtn/>
           </a>
-
+<div><GradientBtnDefault/></div>
           <button className="header-action-btn" aria-label="open menu" data-nav-toggler>
             <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
           </button>
@@ -474,7 +480,48 @@ const Header = () => {
         <div className="overlay" data-nav-toggler data-overlay></div>
 
       </div>
+   
     </header>
+    <main><article><section className="section hero has-bg-image" id="home" aria-label="home" style={{ backgroundImage: "url('./assets/images/hero-bg.svg')" }}>
+      <div className="container">
+
+        <div className="hero-content">
+
+          <h1 className="h1 section-title">
+            The Best Program to <span className="span">Enroll</span> for Exchange
+          </h1>
+
+          <p className="hero-text">
+            Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+          </p>
+
+          <a href="#" className="btn has-before">
+            <span className="span">Find courses</span>
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <figure className="hero-banner">
+
+          <div className="img-holder one" style={{ '--width': 270, '--height': 300 }}>
+            <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" className="img-cover" />
+          </div>
+
+          <div className="img-holder two" style={{ '--width': 240, '--height': 370 }}>
+            <img src="./assets/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" className="img-cover" />
+          </div>
+
+          <img src="./assets/images/hero-shape-1.svg" width="380" height="190" alt="" className="shape hero-shape-1" />
+
+          <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" className="shape hero-shape-2" />
+
+        </figure>
+
+      </div>
+    </section>
+  </article></main>
+    </>
   );
 };
 
@@ -482,110 +529,3 @@ export default Header;
 
 
 
-
-// import React from 'react';
-// //import logo from './images/logo.svg'
-// //import './css/nav.module.css'
-// import Stack from '@mui/material/Stack';
-// import Button from '@mui/material/Button';
-
-// import '../../App.css'
-
-
-// // Logo component
-// const Logo = () => {
-//   return (
-//     <a href="#" className="logo">
-//     <img src={`${process.env.PUBLIC_URL}/assets//images/logo.svg`} width="162" height="50" alt="EduWeb logo" />
-//     </a>
-//   );
-// };
-
-// // NavItem component
-// const NavItem = ({ href, text }) => {
-//   return (
-//     <li className="navbar-item">
-//       <a href={href} className="navbar-link" data-nav-link>
-//         {text}
-//       </a>
-//     </li>
-//   );
-// };
-
-
-// const DropdownItem = ({ href, text, imgSrc }) => {
-//   return (
-//     <a href={href} className="dropbtn flex items-center gap-x-3">
-//       {text}
-//       <img src={imgSrc} alt="" />
-//     </a>
-//   );
-// };
-
-// // ChildDropdownItem component
-// const ChildDropdownItem = ({ href, text, imgSrc }) => {
-//   return (
-//     <a href={href}>
-//       <div className="flex items-center justify-between">
-//         <p>{text}</p>
-//         <img src={imgSrc} alt="" />
-//       </div>
-//     </a>
-//   );
-// };
-
-// // Header component
-// const Header = () => {
-//   return (
-//     <header className="header" data-header>
-//       <div className="container">
-//         <Logo />
-
-//         <nav className="navbar" data-navbar>
-//           <div className="wrapper">
-//             <Logo />
-//             <button className="nav-close-btn" aria-label="close menu" data-nav-toggler>
-//               jhmnm
-             
-//               {/* <ion-icon name="close-outline" aria-hidden="true"></ion-icon> */}
-//             </button>
-//           </div>
-
-//           <ul className="navbar-list">
-//             {/* NavItem components */}
-//              {/* NavItem component */}
-//              <NavItem href="#" text="Mentorship Program">
-//               <button className="mentorship-btn">new</button>
-//             </NavItem>
-//             <NavItem href="#home" text="Courses" />
-//             <NavItem href="#about" text="Training Program">
-//               <button className="scholarshipbtn">UP TO% OFF</button>
-//             </NavItem>
-//             <NavItem href="#courses" text="Community" />
-
-
-//             {/* NavItem component  to check git*/}
-//             <NavItem href="#blog" text="Practice" />
-
-//             <Stack direction="row" spacing={7} sx={{height:"4rem"}}>
-//             <Button variant="outlined" color="error">
-//        Login
-//       </Button>
-//       <Button variant="contained" color="error">
-//        Enroll now
-//       </Button>
-     
-//     </Stack>
- 
-//           </ul>
-//         </nav>
-
-
-        
-//       </div>
-//     </header>
-    
-//   );
-// };
-
-// export default Header;
