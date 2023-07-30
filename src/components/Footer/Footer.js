@@ -10,7 +10,7 @@ import {
     FaAngleRight,
   } from "react-icons/fa";
   import './Footer.css'
-  
+  import 'daisyui';
   const Footer = () => {
     return (
       <div className="w-full relative">

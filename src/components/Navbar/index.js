@@ -1,9 +1,6 @@
 import React from 'react';
 import './module.css'
 
-<<<<<<< HEAD
-
-=======
 // Jahangir
 // Logo component
 const Logo = () => {
@@ -48,7 +45,6 @@ const ChildDropdownItem = ({ href, text, imgSrc }) => {
 };
 
 // Header component
->>>>>>> jahangir
 const Header = () => {
   return (
     <header className="header" data-header>
