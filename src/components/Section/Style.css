@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Barlow:wght@100&family=Inter:wght@300;400&family=Nunito+Sans:opsz,wght@6..12,200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.parent-box {
+  max-width: 100%;
+  background-size: cover;
+  background: url('./../../../public/assets/images/background-image.png') no-repeat bottom 0 left 0, linear-gradient(90.02deg, #343b89 -1.1%, #4d4899 99.97%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1100px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  height: 100%;
+  margin: auto auto;
+}
+
+.container-child-1 {
+  filter: brightness(200%);
+  margin-right: 10px;
+  display: inline-block;
+  max-width: 500px;
+  height: 300px;
+}
+
+.sub-child-1 {
+  padding-top: 12px;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  width: 163px;
+  height: 49px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 20px;
+  font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
+}
+
+.sub-child-2 {
+  color: white;
+  font-size: 40px;
+  padding-top: 32px !important;
+  padding: 16px;
+  font-family: Mulish, Roboto, Helvetica Neue, sans-serif;
+}
+
+.sub-child-3 {
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+}
+
+.container-child-2 {
+  filter: brightness(200%);
+  margin-left: 5px;
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+}
+
+.box-img {
+  background-image: url("./../../../public/assets/images/hex-9602.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 180px;
+  width: 178px;
+}
+.box-img-num {
+  width: 95px;
+  font-weight: bold;
+  margin-top: 42px;
+  margin-left: 35px;
+  display: inline-block;
+  text-align: center;
+  font-size: 41px;
+  color: white;
+}
+.box-img-text {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  margin-left: 18px;
+  max-width: 130px;
+  display: inline-block;
+}
+.number-heading {
+  color: white;
+}
+
+.box-relative {
+  position: relative;
+  left: 88px;
+  bottom: 34px;
+}
+
+.image-box-X1 {
+  position: fixed;
+  top: 220px;
+  right: 85px;
+  filter: blur(84px);
+}
+
+.image-box-X2 {
+  position: fixed;
+  bottom: 171px;
+  left: 8px;
+  filter: blur(54px);
+}
+
+@media only screen and (max-width:850px) {
+  .parent-box{
+    max-width:100%;
+    height: 100%;
+  }
+  .container{
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+  }
+  .image-box-X1 {
+    position: fixed;
+    top: 200px;
+    right: -20px;
+    filter: blur(84px);
+  }
+}

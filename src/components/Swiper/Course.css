@@ -1,0 +1,148 @@
+.bg-animation {
+    display: relative;
+    background-image: url(./../../Images/hero-bg.svg);
+    height: 700px;
+    background-size: cover;
+    max-height: 100vh;
+}
+
+.bg-animation .animate-card {
+    position: absolute;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(250, 79, 250);
+}
+
+.bg-animation .triangle {
+    width: 0;
+    width: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid rgb(245, 81, 245);
+    background-color: transparent;
+}
+
+.bg-animation .animate-card:nth-child(1) {
+    top: 10%;
+    left: 30%;
+    animation: animate 5s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(2) {
+    top: 20%;
+    left: 50%;
+    animation: animate 8s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(3) {
+    top: 60%;
+    left: 20%;
+    animation: animate 9s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(4) {
+    top: 50%;
+    left: 40%;
+    animation: animate 11s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(5) {
+    top: 40%;
+    left: 60%;
+    animation: animate 7s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(6) {
+    top: 70%;
+    left: 30%;
+    animation: animate 13s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(7) {
+    top: 10%;
+    left: 10%;
+    animation: animate 12s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(8) {
+    top: 20%;
+    left: 85%;
+    animation: animate 8s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(9) {
+    top: 55%;
+    left: 65%;
+    animation: animate 9s linear infinite;
+}
+
+.bg-animation .animate-card:nth-child(10) {
+    top: 75%;
+    left: 85%;
+    animation: animate 7s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+            transform: scale(0) translateY(0) rotate(0);
+            opacity: 1;
+    }
+
+    100% {
+            transform: scale(1.2) translateY(-40px) rotate(360deg);
+            opacity: 0;
+    }
+}
+
+
+/* project section */
+
+.project-section-bg {
+    background-image: url('./../../Images/project-bg.svg');
+    height: auto;
+}
+
+/* card design */
+.course-card-shadow {
+    box-shadow: 0 6px #00cbab;
+    background-color: #eef6f5;
+    border-radius: 15px !important;
+}
+
+.course-card-shadow .card-body {
+    padding: 4px 16px !important;
+}
+
+
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-shadow {
+    position: relative;
+    border-radius: 15px;
+    padding: 8px;
+}

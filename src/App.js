@@ -9,11 +9,27 @@ import Blogs from './pages/blogs';
 import SignUp from './pages/signup';
 import Contact from './pages/contact';
 import Footer from './components/Footer/Footer';
+import Section from './components/Section/Section';
+import MeetOurExp from './components/ExpertComponent/MeetOurExp';
+import Platform from './components/ExpertComponent/Platform';
+import Card from './components/card';
+import CardBase from './components/card/card-base';
+import MySwiper from './components/Swiper';
+
+
+
 
 function App() {
 	return (
+	
 		<Router>
+			
 			<Header />
+			
+			<MeetOurExp/> 
+			<MySwiper/>
+			<Section/>
+			<CardBase/>
 			<Routes>
 				<Route exact path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
@@ -21,7 +37,9 @@ function App() {
 				<Route path='/blogs' element={<Blogs />} />
 				<Route path='/sign-up' element={<SignUp />} />
 			</Routes>
+			<Platform/> 
 			<Footer></Footer>
+			
 		</Router>
 		
 	);

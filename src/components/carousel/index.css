@@ -1,0 +1,43 @@
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  height: fit-content;
+}
+
+.carousel-item {
+  flex: 0 0 33.33%;
+  padding: 10px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-buttons button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: large;
+}
+
+.carousel-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 500px) {
+  .carousel-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
