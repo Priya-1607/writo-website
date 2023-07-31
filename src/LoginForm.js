@@ -10,7 +10,7 @@ function LoginForm(props) {
   const toggleMode = () => {
     setIsSignUpMode(!isSignUpMode);
   };
-//new change
+
 
   return (
     <div className="popup">
