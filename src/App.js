@@ -25,11 +25,13 @@ function App() {
 		<Router>
 			
 			<Header />
-			
+			<Section/>
+			<Platform/> 
+			<CardBase/>
 			<MeetOurExp/> 
 			<MySwiper/>
-			<Section/>
-			<CardBase/>
+			
+			
 			<Routes>
 				<Route exact path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
@@ -37,7 +39,7 @@ function App() {
 				<Route path='/blogs' element={<Blogs />} />
 				<Route path='/sign-up' element={<SignUp />} />
 			</Routes>
-			<Platform/> 
+			
 			<Footer></Footer>
 			
 		</Router>
